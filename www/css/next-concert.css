@@ -1,0 +1,269 @@
+.next-concert-bg {
+    position: relative;
+    height: 100%;
+    background-color: #3dd9de;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    z-index: -3; 
+}
+
+.next-concert-view .next-concert-title {
+    width: 60%;
+    margin-top: 3vh;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    color: #1C1C1C;
+    font-size: 2.5vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+.next-concert-view .next-concert-divider {   
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #466c82;
+    height: 2px;
+}
+
+.next-concert-view .next-concert-item {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #1C1C1C;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.next-concert-view .next-concert-header {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #1C1C1C;
+    font-size: 14px;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.next-concert-item .next-concert-item-image{
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 5px;
+}
+
+.next-concert-item .next-concert-item-no{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 15px;
+}
+
+.next-concert-item .next-concert-item-title{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.next-concert-item .next-concert-item-note {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 70px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.next-concert-item .next-concert-item-menu {
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 85%;
+}
+
+.next-concert-item .next-concert-item-toggle-theme {
+    position: absolute;
+    padding-top: 50px;
+    margin-left: 82%;
+    padding-left: 3px;
+}
+
+.next-concert-item .next-concert-item-toggle-theme a{
+    font-size: 30px;
+    font-weight: bold;
+    color: #606998;
+    width: 15px;
+    height: 30px;
+    display: block;
+    padding-left: 3px;
+}
+
+.next-concert-item-menu .next-concert-item-menu-icon {
+    width: 5px;
+    height: 28px;
+}
+
+.next-concert-item .next-concert-item-menu a{
+    width: 20px;
+    height: 30px;
+    display: block;
+    padding-left: 5px;
+}
+
+.next-concert-item .next-concert-item-menu a.activated{
+    opacity: 0.8;
+}
+
+.next-concert-item .next-concert-item-plus {
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: rgb(148, 148, 148);
+    margin: 0px;
+    height: 40px;
+}
+.next-concert-item .next-concert-item-plus .button-icon:before {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.next-concert-item .next-concert-item-plus-title {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: rgb(148, 148, 148);
+    text-transform: uppercase;
+}
+
+
+
+.next-concert-popover.popover {
+    margin-top: -10px;
+    width: 80px;
+    background: transparent;
+    box-shadow: none;
+    height: 50px;
+}
+
+.next-concert-popover .popover-arrow {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(106, 135, 136);
+}
+
+.next-concert-popover .content {
+    margin-top: 3px;
+    position: absolute;
+    background-color: rgb(106, 135, 136);
+    margin-left: -65px;
+}
+
+.next-concert-popover .content .list {
+    background-color: rgb(106, 135, 136);
+    width: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.next-concert-popover .content .list .item{
+    background-color: rgb(106, 135, 136);
+    border: none;
+    min-height: 20px;
+    line-height: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.next-concert-item-info { 
+    width: 100%;
+    min-height: 90px;
+    background-color: #3dd9de;
+}
+
+.next-concert-theme-container{
+    width: 100%;
+}
+
+.next-concert-theme-container .next-concert-theme-item{
+    height: 60px;
+    width: 100%;
+    background-color: #3dd9de;
+}
+
+.next-concert-theme-item .next-concert-theme-item-title, .next-concert-theme-item .next-concert-theme-item-no{
+    position: absolute;
+}
+
+.next-concert-theme-item .next-concert-theme-item-no{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.next-concert-theme-item .next-concert-theme-item-title{
+    position: absolute;
+    margin-left: 20%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.next-concert-theme-item .next-concert-theme-item-content {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 21px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.next-concert-theme-item .next-concert-theme-item-play {
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 70%;
+}
+
+.next-concert-theme-item-play .next-concert-theme-item-play-icon {
+    width: 18px;
+    height: 20px;
+}
+
+.next-concert-theme-item .next-concert-theme-item-play a.activated{
+    opacity: 0.8;
+}
+
+.next-concert-theme-item .next-concert-theme-item-menu {
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 85%;
+}
+
+.next-concert-theme-item-menu .next-concert-theme-item-menu-icon {
+    width: 4px;
+    height: 20px;
+}
+
+.next-concert-theme-item .next-concert-theme-item-menu a{
+    width: 15px;
+    height: 30px;
+    display: block;
+    padding-left: 3px;
+}
+
+.next-concert-theme-item .next-concert-theme-item-menu a.activated{
+    opacity: 0.8;
+}
+
+.next-concert-header .next-concert-item-menu {
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 80%;
+}

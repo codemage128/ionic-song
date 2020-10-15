@@ -1,0 +1,218 @@
+.change-playlist-bg {
+    position: relative;
+    height: 100%;
+    background-color: rgb(26, 26, 26);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    z-index: -3; 
+}
+
+.change-playlist-header {
+    height: 5%;
+}
+
+.change-playlist-header .change-playlist-header-title {
+    margin-left: 5%;
+    margin-top: 3vh;
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: rgb(37, 175, 178);
+    text-transform: uppercase;
+}
+
+.change-playlist-view .change-playlist-item {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    height: 8%;
+}
+
+.change-playlist-view .change-playlist-row {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 10px;
+    margin-top: 2%;
+    height: 11%;
+    color: white;
+}
+
+
+.change-playlist-row .change-playlist-item-title, .change-playlist-row .change-playlist-item-no{
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.change-playlist-row .change-playlist-item-title{
+    position: absolute;
+    margin-left: 10%;
+}
+
+.change-playlist-row .change-playlist-item-content {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 25px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.change-playlist-row .change-playlist-item-date {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 45px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.change-playlist-view .playl-theme-item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    height: 75px;
+    background-color: rgb(45, 45, 51);
+    padding: 0px;
+}
+
+.change-playlist-view .playl-theme-item-container .playl-theme-item-divider {
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(17, 17, 17);
+    height: 1px;
+    width: 94%;
+    position: absolute;
+    margin-left: 3%;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-title, .change-playlist-view .playl-theme-item .playl-theme-item-no{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20%;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-title{
+    margin-top: 30px;
+    margin-left: 20%;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-content {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 40px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-img {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 5%;
+    width : 40px;
+    height: 40px;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-menu {
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 85%;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-add {
+    margin-top: 20px;
+    margin-left: 80%;
+    font-size: 15px;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-add button{
+    font-size: 12px;
+    line-height: 30px;
+    color: rgb(144, 131, 131);
+    min-width: 20px;
+    min-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.change-playlist-view .playl-theme-item .playl-theme-item-menu button:before {
+    font-size: 28px;
+    line-height: 30px;
+    color: rgb(98, 95, 113);
+    font-weight: normal;
+}
+
+.change-playlist-row button{
+    line-height: 35px;
+    font-size: 35px;
+}
+
+.change-playlist-row button::before{
+    line-height: 35px;
+    font-size: 35px;
+}
+.change-playlist-row .item-toggle {
+    background: transparent;
+    border: none;
+    width: 10px;
+}
+
+.change-playlist-row .item-toggle .ng-binding {
+    padding-left: 25px;
+}
+
+.change-playlist-row label.toggle {
+    left: 1px;
+}
+
+.change-playlist-row.footer-button {
+    height: 6%;
+}
+
+.change-playlist-row.footer-button label {
+    text-align: center;
+}
+
+.change-playlist-row.footer-button label button {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgb(37, 175, 178);
+    border-radius: 30px;
+    width: 85px;
+    text-transform: uppercase;
+    min-height: 30px;
+    margin-left: 15px;
+}
+
+.change-playlist-row.footer-button label .add-theme {
+    width: 120px;
+    margin-left: 5px;
+}
+
+ion-scroll.change-playlist-list-scroll {
+    margin-left: 4%;
+    width: 92%;
+    height: 70%;
+    background-color: rgb(45, 45, 51);
+}
+
+.change-playlist-view .change-playlist-theme-list-header {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 10px;
+    margin-top: 2%;
+    height: 7%;
+}
+
+
+.change-playlist-theme-list-header .theme-list-header {
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(37, 175, 178);
+    text-transform: uppercase;
+}

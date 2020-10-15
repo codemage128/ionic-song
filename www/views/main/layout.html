@@ -1,0 +1,48 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar main-nav-bar" align-title="center">
+            <!-- <ion-nav-back-button>
+            </ion-nav-back-button> -->
+            <ion-nav-title>
+                <img class="main-nav-bar-log" ng-src="img/logo-bar-green.png">
+            </ion-nav-title>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent">
+        </ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" class="main-menu" expose-aside-when="large">
+        <div class="theme-list-bg"></div>
+        <ion-content>
+            <ion-list>
+                <ion-item class="item-icon-left" nav-clear menu-close ui-sref="main.menu">
+                    <img class="sidebar-menu-item-image" src="img/logo-bar-green.png" style="max-height:30px;float: left;">
+                </ion-item>
+                <ion-item class="item-icon-left" nav-clear menu-close ui-sref="main.theme-list">
+                    <img class="sidebar-menu-item-image" src="img/menu/menu-theme-mic.png" style="max-height:30px;float: left;">
+                    <h2 class="menu-text">{{ 'manage_themes' | translate }}</h2>
+                </ion-item>
+                <ion-item class="item-icon-left" nav-clear menu-close ui-sref="main.playl-list">
+                    <img class="sidebar-menu-item-image" src="img/menu/menu-theme-list.png" style="max-height:30px;float: left;">
+                    <h2 class="menu-text">{{ 'manage_playlist' | translate }}</h2>
+                </ion-item>
+                <ion-item class="item-icon-left" nav-clear menu-close ui-sref="main.next-concert">
+                    <img class="sidebar-menu-item-image" src="img/menu/menu-theme-concierto.png" style="max-height:30px;float: left;">
+                    <h2 class="menu-text">{{ 'next_concert' | translate }}</h2>
+                </ion-item>
+                <ion-item class="item-icon-left" nav-clear menu-close ui-sref="main.configuration">
+                    <img class="sidebar-menu-item-image" src="img/menu/menu-theme-mic.png" style="max-height:30px;float: left;">
+                    <h2 class="menu-text">{{ 'configuration' | translate }}</h2>
+                </ion-item>
+                <ion-item class="item-icon-left" nav-clear menu-close href="javascript::" ng-click="changeLocale()">
+                    <h2 class="menu-text" ng-if="lang=='es'"> {{ 'english' | translate }}</h2>
+                    <h2 class="menu-text" ng-if="lang=='en'">{{ 'spanish' | translate }}</h2>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

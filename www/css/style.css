@@ -1,0 +1,115 @@
+/* Empty. Add your own CSS if you like */
+.auth-outer .auth-bg {
+    position: relative;
+    height: 100%;
+    background-color: transparent;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -3; 
+    background-image: url(../img/bg-img.png);
+
+    /* height: 100%;
+    background-color: rgb(26,26,26);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    z-index: -3;  */
+}
+
+.auth-outer ion-view {
+    background-color: transparent;
+    box-shadow: none !important; 
+}
+
+.sign-view .logo-content {
+    height: 35%;
+    text-align: center; 
+}
+
+.sign-view .input-content {
+    height: 22%;
+    text-align: center; 
+}
+
+.sign-view .input-content .item-input{
+    margin: 20px 20px auto 20px;
+    padding: 0px 0px 0px 10px;
+}
+
+.sign-view .desc-content {
+    height: 15%;
+    text-align: center; 
+}
+
+.sign-view .desc-content .col {
+    margin: 0px 20px auto 20px;
+    color: white;
+    text-align: left;
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 12px;
+}
+}
+
+
+.sign-view .button-content {
+    height: 20%;
+    margin: 0px 20px auto 20px;
+}
+
+.sign-view .button-content .button {
+    border-radius: 30px;
+    border-color: white;
+    border-width: 2px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 35px;
+    min-height: 35px;
+    /* background-color: rgba(75, 85, 119, 0.8);  */
+    background-color: rgba(36, 175, 178, 0.8);
+    text-transform: uppercase;
+}
+
+
+.main-nav-bar, .main-nav-bar .button {
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    background-image: none;
+}
+
+.main-nav-bar .main-nav-bar-log{
+    height: 60%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.main-nav-bar button.back-button{
+    display: block;
+    padding: 0;
+    white-space: nowrap;
+    width: 10%;
+    font-weight: 400;
+}
+
+
+.main-menu .item-complex .item-content,.main-menu .item-radio .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 49px 16px 16px;
+    border: none;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+}
+.main-menu .item-complex .item-content .menu-text {
+    font-size: 12px;
+    color: #908e8e;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

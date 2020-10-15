@@ -1,0 +1,30 @@
+<ion-modal-view class="playl-theme-list-view" cache-view="false">
+    <div class="playl-theme-list-bg"></div>
+    <ion-content scroll="false">
+        <div class="playl-theme-list-header">
+            <span class="playl-theme-list-title">{{ 'add_theme_to_playlist' | translate }}</span>
+            <span class="playl-theme-list-search-input" ng-show="themeModal.isSearch">
+                <input type="text" placeholder="{{ 'search' | translate }}..."
+                ng-model="searchKey" ng-change="doThemeModalSearch()">
+            </span>
+        </div>
+        <ion-scroll zooming="true" direction="y" style="width: 100%;height: 75%;">
+            <div class="playl-theme-list-item" ng-repeat="theme in themeModal.themeList">
+                <p class="playl-theme-list-divider">
+                </p>
+                <span class="playl-theme-list-item-menu">
+                    <button class="button button-dark" ng-click="addThemeToPlayList(theme)">{{ 'add' | translate }}</button>
+                </span>
+                <span class="playl-theme-list-item-no">{{ theme.id }}</span>
+                <span class="playl-theme-list-item-title">{{ theme.title }}</span>
+                <p class="playl-theme-list-item-content">{{ theme.artist + " : " + theme.tone + " : " + theme.speed + " bpm"}}</p>
+            </div>
+        </ion-scroll>    
+        
+        <div class="playl-theme-list-footer">
+            <label>
+                <button class="button" on-touch="doThemeModalClose()">{{ 'close' | translate }}</button>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,232 @@
+.theme-test-bg {
+    position: relative;
+    height: 100%;
+    background-color: rgb(37,175,178);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    z-index: -3; 
+}
+
+.theme-test-view .theme-test-item {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    /* color: black; */
+    font-size: 15px;
+    font-weight: bold;
+    height: 10%;
+}
+
+.header .theme-test-item {
+    margin-top: 5px;
+}
+
+.theme-test-item .theme-test-item-title, .theme-test-item .theme-test-item-no{
+    position: absolute;
+}
+
+.theme-test-item .theme-test-item-title{
+    margin-left: 10%;
+}
+
+.theme-test-item .theme-test-item-content {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 21px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.theme-test-item .theme-test-item-play {
+    position: absolute;
+    margin-left: 63%;
+    margin-top: 5px;
+}
+
+.theme-test-item .theme-test-item-play a.activated, .theme-test-item .theme-test-item-menu a.activated {
+    opacity: 0.5;
+}
+
+.theme-test-item .theme-test-item-play img, .theme-test-item .theme-test-item-menu img{
+    width: 35px;
+    height: 35px;
+}
+
+.theme-test-item .theme-test-item-menu {
+    position: absolute;
+    margin-left: 78%;
+    margin-top: 5px;
+}
+
+.theme-test-view .theme-test-content {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+.theme-test-content .theme-test-desc {
+    font-size: 30px;
+    line-height: 32px;
+    color: white;
+    margin-left: 4%;
+    margin-right: 9%;
+    margin-top: 5%;
+    font-weight: 200;
+}
+
+.theme-test-content .theme-test-icon {
+    font-size: 25px;
+    line-height: 27px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 200;
+    position: absolute;
+    left: 86%;
+}
+
+.theme-test-footer .testmode-title {
+    font-size: 12px;
+}
+
+.theme-test-footer .testmode-toggle {
+    width: 15px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.theme-test-footer, .theme-test-footer .button {
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    background-image: none;
+    height: 50px;
+}
+
+.theme-test-footer .footer-toggle {
+    color: rgb(172, 118, 118);
+    font-size: 9px;
+    display: flex !important;
+    align-items: center;
+}
+
+.theme-test-footer .footer-button {
+    font-size: 12px;
+    width: 80px;
+    background-color: rgb(37, 175, 178);
+    border-radius: 20px;
+    text-transform: uppercase;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.theme-test-footer .buttons .item-toggle {
+    background: transparent;
+    border: none;
+    width: 10px;
+    font-size: 10px;
+    color: white;
+}
+
+.theme-test-footer .buttons {
+    display: flex;
+    align-items: center;
+}
+
+.theme-test-footer .buttons-left {
+    width: 30%;
+}
+
+.theme-test-footer .buttons-left span{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.theme-test-footer .buttons-right {
+    width: 25%;
+}
+
+.theme-test-footer .title {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.theme-test-footer .footer-btn {
+    width: 30px;
+    height: 25px;
+}
+
+.theme-test-footer .activated {
+    opacity: 0.9;
+}
+
+.theme-test-footer .footer-center-btn {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.theme-test-footer .icon-footer {
+    text-align: center;
+    height: 100%;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.theme-test-footer span a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.theme-test-popover.popover {
+    margin-top: -10px;
+    width: 120px;
+    background: transparent;
+    box-shadow: none;
+    height: 50px;
+}
+
+.theme-test-popover .content {
+    margin-top: -100px;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+}
+
+
+.theme-test-popover .content img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.theme-test-popover .content span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px 15px 15px;;
+    color: #cccccc;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.theme-list-item-play-text {
+    /* color: white; */
+}
+
+.theme-list-item-play-text.active {
+    color: yellow;
+}
+
+

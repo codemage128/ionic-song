@@ -1,0 +1,76 @@
+<ion-view class="theme-test-view" cache-view="false">
+    <div class="theme-test-bg"></div>
+    <ion-content scroll="false" style="background-color: {{ theme.color }} ">
+        <div class="header" style="height: 50px;color: {{getFontColor(theme.color)}};">
+            <div class="theme-test-item">
+                <span class="theme-test-item-play" ng-if="!isNew">
+                    <a ui-sref="main.theme-info({id: (theme.id)})">
+                        <img src="img/theme-test/info_btn_default.png">
+                    </a>
+                </span>
+                <span class="theme-test-item-menu" ng-if="!isNew">
+                    <a ui-sref="main.theme-param({id: (theme.id)})">
+                        <img src="img/theme-test/param_btn_default.png">
+                    </a>
+                </span>
+                <span class="theme-test-item-no" style="font-size: 2vh;">{{ theme.id }}</span>
+                <span class="theme-test-item-title" ng-if="!isNew" style="font-size: 2vh;">{{ theme.title }}</span>
+                <span class="theme-test-item-title" ng-if="isNew" style="text-transform:uppercase; fnt-size:2vh;">{{'new_theme'| translate}}</span>
+                <p class="theme-test-item-content" ng-if="!isNew" style="font-size: 1.5vh;">{{ theme.note }}</p>
+            </div>
+        </div>
+        <div style="height:75vh;" on-touch="tickLetter()">
+            <div ng-if="!playMode">
+                <div class="theme-test-content" style="height:75vh;" ng-if="!isPlaying">
+                    <textarea style="width:100%;height:70vh;color: {{getFontColor(theme.color)}};font-family: {{theme.fontStyle}};background-color:transparent;border:1px solid #eabb0a;padding: 10px;line-height:{{theme.fontSize}}px;text-align: {{theme.justification}}; font-size: {{theme.fontSize}}px; font-weight: {{ theme.bold? 'bold': 'normal'}};" id="theme-test-letter" ng-model="letter"></textarea>
+                </div>
+                <div class="theme-test-content" style="height:75vh;" ng-if="isPlaying">
+                    <div class="theme-test-letter-item" ng-repeat="letterItem in letterItemList">
+                        <p ng-if="letterItem.isShow" class="theme-list-item-item-text" style="color: {{getFontColor(theme.color)}};font-family: {{theme.fontStyle}};line-height:{{theme.fontSize}}px; font-size: {{theme.fontSize}}px; text-align: {{theme.justification}}; font-weight: {{ theme.bold? 'bold': 'normal'}};">
+                            {{ letterItem.text }}&nbsp
+                            <i class="ion ion-checkmark-circled" style="font-size:18px" ng-if="letterItem.isTick"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="playMode">
+                <div class="theme-test-content" style="height:75vh;">
+                    <div ng-repeat="letterItem in letterItemList">
+                        <p ng-if="letterItem.isShow"  class="theme-list-item-play-text" id="letterItem-{{letterItem.id}}" style="color: {{getFontColor(theme.color)}};font-family: {{theme.fontStyle}};line-height:{{theme.fontSize}}px; font-size: {{theme.fontSize}}px; text-align: {{theme.justification}}; font-weight: {{ theme.bold? 'bold': 'normal'}};">
+                            {{ letterItem.text }}&nbsp
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar theme-test-footer" align-title="center">
+        <div class="buttons buttons-left" ng-click="toggleTestMode($event)">
+            <a>
+                <img src="img/theme-test/testmode_toggle_down.png" class="testmode-toggle" ng-if="playMode">
+                <img src="img/theme-test/testmode_toggle_up.png" class="testmode-toggle" ng-if="!playMode">
+            </a>
+            <span class="testmode-title" ng-if="!playMode">{{'test_mode'| translate}}</span>
+            <span class="testmode-title" ng-if="playMode">{{'play_mode'| translate}}</span>
+        </div>
+        <div class="buttons" style="width: 40%;">
+            <span class="icon-footer footer-back" style="width:30%;">
+            </span>
+            <span class="icon-footer footer-play" ng-if="!isPlaying">
+                <a ng-click="playAudio()">
+                    <img src="img/theme-test/play_default.png" class="footer-center-btn"></img>
+                </a>
+            </span>
+            <span class="icon-footer footer-play" ng-if="isPlaying">
+                <a ng-click="pauseAudio()">
+                    <img src="img/theme-test/pause_default.png" class="footer-center-btn"></img>
+                </a>
+            </span>
+            <span class="icon-footer footer-next" style="width:30%;">
+            </span>
+        </div>
+        <div class="buttons buttons-right">
+            <button class="button footer-button" ng-click="doSave()" style="position: absolute; right: 10px;">{{ 'save' | translate }}</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

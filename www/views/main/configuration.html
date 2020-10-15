@@ -1,0 +1,86 @@
+<ion-view class="configuration-view" cache-view="false">
+    <div class="playl-new-bg"></div>
+
+    <ion-content scroll="true">
+        <div class="configuration-item">
+            <span class="configuration-item-title">
+                {{ 'user_configuration' | translate }}
+            </span>
+        </div>
+        <form name="configurationForm">
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'user_name' | translate }}</span>
+                <input type="text" class="input-90" placeholder="{{ 'user_name' | translate }}" ng-model="user.user_name" required>
+            </label>
+            <label>
+                <span class="input-label">{{ 'user_email' | translate }}</span>
+                <input type="email" class="input-100" placeholder="{{ 'user_email' | translate }}" ng-model="user.user_email" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'surname' | translate }}</span>
+                <input type="text" class="input-100" placeholder="{{ 'surname12' | translate }}" ng-model="user.user_surname" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'music_group' | translate }}</span>
+                <input type="text" class="input-90" placeholder="{{ 'music_group' | translate }}" ng-model="user.user_music_group" required>
+            </label>
+            <label>
+                <span class="input-label">{{ 'direction' | translate }}</span>
+                <input type="text" class="input-100" placeholder="{{ 'direction' | translate }}" ng-model="user.user_direction" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'city' | translate }}</span>
+                <input type="text" class="input-90" placeholder="{{ 'city' | translate }}" ng-model="user.user_city" required>
+            </label>
+            <label>
+                <span class="input-label">{{ 'cp' | translate }}</span>
+                <input type="text" class="input-100" placeholder="{{ 'cp' | translate }}" ng-model="user.user_cp" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'province' | translate }}</span>
+                <input type="text" class="input-90" placeholder="{{ 'province' | translate }}" ng-model="user.user_province" required>
+            </label>
+            <label>
+                <span class="input-label">{{ 'telephone' | translate }}</span>
+                <input type="tel" class="input-100" placeholder="{{ 'telephone' | translate }}" ng-model="user.user_telephone" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'license' | translate }}</span>
+                <input type="text" class="input-100" placeholder="{{ 'license' | translate }}" ng-model="user.user_license" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'artist_name' | translate }}</span>
+                <input type="text" class="input-100" placeholder="{{ 'artist_name' | translate }}" ng-model="user.user_artist_name" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label">{{ 'pt_of_purpose' | translate }}</span>
+                <input type="text" class="input-100" placeholder="{{ 'pt_of_purpose' | translate }}" ng-model="user.user_pt_purpose" required>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <label>
+                <span class="input-label" style="display: flex;">
+                    <input type="checkbox" ng-model="user.user_term_policy" required>&nbsp;&nbsp;{{ 'accept_term_privacy' | translate }}</span>
+            </label>
+        </div>
+        <div class="row configuration-row">
+            <a class="button footer-button" on-touch="doSave()" style="color:white;">{{ 'save' | translate }}</a>
+        </div>
+    </form>
+    </ion-content>
+</ion-view>

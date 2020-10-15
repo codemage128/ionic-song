@@ -1,0 +1,71 @@
+<ion-view class="playl-list-view" cache-view="false">
+    <div class="playl-list-bg"></div>
+    <ion-content scroll="false">
+        <div class="playl-list-header">
+            <span class="playl-list-title">{{ 'manage_playlists' | translate }}</span>
+            <span class="playl-list-search" ng-show="!isSearch">
+                {{ 'search' | translate }}
+                <button class="button button-icon icon ion-search" on-touch="toggleSearch()"></button>
+            </span>
+            <span class="playl-list-search-input" ng-show="isSearch" style="width:40%">
+                <input type="text" placeholder="{{ 'search' | translate }}..." ng-model="searchKey" ng-change="doSearch()" id="playl-list-search-val">
+            </span>
+        </div>
+        <ion-scroll zooming="true" direction="y" class="playlist-container">
+            <div class="playl-list-item" ng-repeat="playlist in playlList">
+                <div class="playl-list-item-info">
+                    <span class="playl-list-item-menu">
+                        <a ng-click="toggleMenu($event, playlist.id)">
+                            <img src="img/theme-list/theme-item-menu.png" class="playl-list-item-menu-icon">
+                        </a>
+                    </span>
+                    <span class="playl-list-item-image">
+                        <img class="playl-new-image" style="width:80px;height:80px" src="{{playlist.image}}" ng-if="playlist.image != '' && playlist.image != null" />
+                        <img class="playl-new-image" style="width:80px;height:80px" src="img/playlist-new/playlist-default.png" ng-if="playlist.image == '' || playlist.image == null"/>
+                    </span>
+                    <span class="playl-list-item-no">{{ 'playlist' | translate }}{{ playlist.id }}</span>
+                    <span class="playl-list-item-title">{{ playlist.title }}</span>
+                    <p class="playl-list-item-date" style=" position: absolute; margin-left: 100px; margin-top: 50px; font-size: 13px; font-weight: normal;">{{ playlist.date.substring(0,10)}}</p>
+                    <p class="playl-list-item-note">{{ playlist.note}}</p>
+                    <span class="playl-list-item-toggle-theme" ng-if="playlist.themeIds.length > 0">
+                        <a ng-click="toggleThemeView(playlist)">
+                            <i class="fa fa-angle-down" ng-if="playlist.isThemeToggle"></i>
+                            <i class="fa fa-angle-up" ng-if="!playlist.isThemeToggle"></i>
+                        </a>
+                    </span>
+                </div>
+                <p class="playl-list-divider">
+                </p>
+                <div class="playl-list-theme-container" ng-if="playlist.isThemeToggle">
+                    <div class="playl-list-theme-item" ng-repeat="theme in playlist.themeList">
+                        <div style="height:58px;padding-top:5px;">
+                            <span class="playl-list-theme-item-no"> {{theme.id}} </span>
+                            <span class="playl-list-theme-item-title">{{ theme.title }}</span>
+                            <p class="playl-list-theme-item-content">{{ theme.artist + " : " + theme.tone + " : " + theme.speed + " bpm"}}</p>
+                            <span class="playl-list-theme-item-menu">
+                                <a on-touch="toggleThemeMenu($event, playlist.id, theme.id)" class="disable-user-behavior">
+                                    <img src="img/theme-list/theme-item-menu.png" class="playl-list-theme-item-menu-icon">
+                                </a>
+                            </span>
+                            <span class="playl-list-theme-item-play">
+                                <a ng-if="theme.letterItemList.length > 0">
+                                    <img src="img/theme-list/theme-item-play.png" class="playl-list-theme-item-play-icon">
+                                </a>
+                            </span>
+                        </div>
+                        <p class="playl-list-divider">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ion-scroll>
+        <div class="playl-list-item">
+            <p class="playl-list-divider">
+            </p>
+            <p class="playl-list-item-plus">
+                <button class="button button-icon icon ion-plus-circled" ui-sref="main.playl-new"></button>
+            </p>
+            <p class="playl-list-item-plus-title">{{ 'new_playlist' | translate }}</p>
+        </div>
+    </ion-content>
+</ion-view>

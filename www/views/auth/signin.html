@@ -1,0 +1,43 @@
+<ion-view class="sign-view" cache-view="false">
+  
+    <ion-content scroll="false" style="height: 700px">
+        <div class="logo-content row">
+            <div class="col col-bottom">
+                <img ng-src="img/logo_white.png">
+            </div>
+        </div>
+        <div class="input-content row">
+            <div class="col col-bottom">
+                <label class="item item-input">
+                    <input type="email" placeholder="{{ 'user_email' | translate }}" ng-model="user_email" required>
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="{{ 'user_pass' | translate }}" ng-model="user_password" required>
+                </label>
+            </div>
+        </div>
+        <div class="desc-content row">
+            <div class="col col-top">
+                {{ 'signin_text' | translate }}
+            </div>
+        </div>
+        <div class="button-content row">
+            <div class="col col-top col-10">
+            </div>
+            <div class="col col-top">
+                <button class="button button-block sign-in" ng-disabled="!user_email || !user_password" on-touch="doLogin()">
+                    {{ 'sign_in' | translate }}
+                </button>
+            </div>
+            <div class="col col-top col-10">
+            </div>
+            <div class="col col-top">
+                <a class="button button-block sign-up " href="http://www.visualsong.com/signup">
+                    {{ 'sign_up' | translate }}
+                </a>
+            </div>
+            <div class="col col-top col-10">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

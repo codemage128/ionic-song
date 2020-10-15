@@ -1,0 +1,55 @@
+<ion-view class="playl-new-view" cache-view="false">
+    <div class="playl-new-bg"></div>
+    <ion-content scroll="true">
+        
+        <form name="playlNewForm">
+            <ion-scroll zooming="true" direction="y">
+                <div class="header" style="height:50px;">
+                    <div class="playl-new-item">
+                        <p class="playl-new-item-content">{{ 'edit_playlist' | translate }}</p>
+                    </div>
+                </div>
+                <div class="row playl-new-image-row">
+                    <label>
+                        <span class="input-label">{{ 'image' | translate }}</span>
+                        <img class="input-50 playl-new-image" style="width:15vh;height:15vh" src="{{playList.image}}" ng-if="playList.image != '' && playList.image != null"/>
+                        <img class="input-50 playl-new-image" style="width:15vh;height:15vh" src="img/playlist-new/playlist-default.png" ng-if="playList.image == '' || playList.image == null"/>
+                    </label>
+                    <label style="display: flex;align-items: center;">
+                        <button class="button image-button" on-touch="doSaveImage()">{{ 'add_image' | translate }}</button>
+                    </label>
+                </div>
+                <div class="row playl-new-row">
+                    <label>
+                        <span class="input-label">{{ 'no_of_playlist' | translate }}</span>
+                        <input type="number" class="input-100" placeholder="{{ 'number' | translate }}" ng-model="playList.id" readonly>
+                    </label>
+                </div>
+                <div class="row playl-new-row">
+                    <label>
+                        <span class="input-label">{{ 'date' | translate }}</span>
+                        <div class="input-90 custom-date">
+                            <input type="date" placeholder="{{ 'date' | translate }}" ng-model="playList.date" required >
+                        </div>
+                    </label>
+                    <label>
+                        <span class="input-label">{{ 'title' | translate }}</span>
+                        <input type="text" class="input-100" placeholder="{{ 'title' | translate }}" ng-model="playList.title" required>
+                    </label>
+                </div>
+
+                <div class="row playl-new-row row-textarea">
+                    <label>
+                        <span class="input-label">{{ 'notes' | translate }}</span>
+                        <textarea type="text" class="input-100" placeholder="{{ 'notes' | translate }}" rows="5" ng-model="playList.note"></textarea>
+                    </label>
+                </div>
+                <div class="footer-row" style="display:flex;align-items:center;height: 80px;">
+                    <div class="footer-content">
+                        <button class="button footer-button" ng-disabled="!playlNewForm.$dirty || playlNewForm.$invalid " on-touch="doSave()">{{ 'save' | translate }}</button>
+                    </div>
+                </div>
+            </ion-scroll>
+        </form>
+    </ion-content>
+</ion-view>

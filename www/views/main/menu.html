@@ -1,0 +1,39 @@
+<ion-view class="main-menu-view" cache-view="false">
+    <div class="main-menu-bg"></div>
+    <ion-content>
+        <div class="row menu-top">
+        </div>
+        <div class="row menu-title">
+            <span class="menu-title-text">Hola John nobody</span>
+            <span class="menu-subtitle-text">Vamos a trabajar</span>
+        </div>
+        <div class="row menu-top">
+        </div>
+        <div class="row menu-list">
+            <div class="col col-50">
+                <a class="menu-item" ui-sref="main.theme-list">
+                    <img class="menu-item-image" src="img/menu/menu-theme-mic.png">
+                    <span class="menu-item-title">{{ 'manage_themes' | translate }}</span>
+                </a>
+            </div>
+            <div class="col col-50">
+                <a class="menu-item" ui-sref="main.playl-list">
+                    <img class="menu-item-image" src="img/menu/menu-theme-list.png">
+                    <span class="menu-item-title">{{ 'manage_playlists' | translate }}</span>
+                </a>
+            </div>
+            <div class="col col-50">
+                <a class="menu-item" ui-sref="main.next-concert">
+                    <img class="menu-item-image" src="img/menu/menu-theme-concierto.png">
+                    <span class="menu-item-title">{{ 'next_concert' | translate }}</span>
+                </a>
+            </div>
+            <div class="col col-50" >
+                <a class="menu-item" ui-sref="main.configuration">
+                    <img class="menu-item-image" src="img/menu/menu-theme-mic.png">
+                    <span class="menu-item-title">{{ 'configuration' | translate }}</span>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

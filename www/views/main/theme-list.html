@@ -1,0 +1,44 @@
+<ion-view class="theme-list-view" cache-view="false">
+    <div class="theme-list-bg"></div>
+    <ion-content scroll="true">
+        <div class="theme-list-header">
+            <span class="theme-list-title">{{ 'manage_themes' | translate }}</span>
+            <span class="theme-list-search" ng-show="!isSearch">
+                {{ 'search' | translate }}
+                <button class="button button-icon icon ion-search" on-touch="toggleSearch()"></button>
+            </span>
+            <span class="theme-list-search-input" ng-show="isSearch">
+                <input type="text" placeholder="{{ 'search' | translate }}..." ng-model="searchKey" ng-change="doSearch()" id="theme-list-search-val">
+            </span>
+        </div>
+        <ion-scroll zooming="true" direction="y" class="theme-list-container">
+            <div class="theme-list-item" ng-repeat="theme in themeList" >
+                <p class="theme-list-divider">
+                </p>
+                <span class="theme-list-item-play">
+                    <a ng-if="theme.letterItemList.length > 0">
+                        <img src="img/theme-list/theme-item-play.png" class="theme-list-item-play-icon">
+                    </a>
+                </span>
+                <span class="theme-list-item-menu">
+                    <a on-touch="toggleMenu($event, theme.id)">
+                        <img src="img/theme-list/theme-item-menu.png" class="theme-list-item-menu-icon">
+                    </a>
+                </span>
+                <span class="theme-list-item-no">{{ theme.id }}</span>
+                <span class="theme-list-item-title">{{ theme.title }}</span>
+                <p class="theme-list-item-content">{{ theme.artist + " : " + theme.tone + " : " + theme.speed + " bpm"}}</p>
+                <a style="width: 80%;display: block; position: absolute;height: 60px;" ng-click="goTest(theme)">
+                </a>
+            </div>
+        </ion-scroll>
+        <div class="theme-list-item">
+            <p class="theme-list-divider">
+            </p>
+            <p class="theme-list-item-plus">
+                <button class="button button-icon icon ion-plus-circled" ui-sref="main.theme-test"></button>
+            </p>
+            <p class="theme-list-item-plus-title">{{ 'new_theme' | translate }}</p>
+        </div>
+    </ion-content>
+</ion-view>

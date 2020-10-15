@@ -1,0 +1,123 @@
+<ion-view class="next-concert-view" cache-view="false">
+    <div class="next-concert-bg"></div>
+    <ion-content scroll="false">
+        <div class="next-concert-header" ng-if="!isShowDetail && !isShowPlay">
+            <span class="next-concert-title">{{ 'next_concert' | translate }}</span>
+            <span class="next-concert-item-menu" ng-if="playlist == null">
+                <a on-touch="toggleNoPlaylistMenu($event)" style="padding: 10px;">
+                    <img src="img/theme-list/theme-item-menu.png" class="next-concert-item-menu-icon">
+                </a>
+            </span>
+        </div>
+        <ion-scroll zooming="true" direction="y" style="width: 100%;height: 75vh;margin-top: 1vh;" ng-if="!isShowPlay">
+            <div class="next-concert-item" ng-if="!isShowDetail && !isShowPlay">
+                <div class="next-concert-item-info" ng-if="playlist != null">
+                    <span class="next-concert-item-menu">
+                        <a ng-click="toggleMenu($event, playlist.id)">
+                            <img src="img/theme-list/theme-item-menu.png" class="next-concert-item-menu-icon">
+                        </a>
+                    </span>
+                    <span class="next-concert-item-image">
+                        <img class="playl-new-image" style="width:80px;height:80px" src="{{playlist.image}}" ng-if="playlist.image != '' && playlist.image != null"
+                        />
+                        <img class="playl-new-image" style="width:80px;height:80px" src="img/playlist-new/playlist-default.png" ng-if="playlist.image == '' || playlist.image == null"
+                        />
+                    </span>
+                    <span class="next-concert-item-no">{{ 'playlist' | translate }}{{ playlist.id }}</span>
+                    <span class="next-concert-item-title">{{ playlist.title }}</span>
+                    <p class="next-concert-item-date" style=" position: absolute; margin-left: 100px; margin-top: 52px; font-size: 13px; font-weight: normal;">{{ playlist.date.substring(0,10)}}</p>
+                    <p class="next-concert-item-note">{{ playlist.note}}</p>
+                </div>
+                <p class="next-concert-divider">
+                </p>
+                <div class="next-concert-theme-container">
+                    <div class="next-concert-theme-item" style="{{$index == curThemeIndex ? 'background-color:#77b0c5' : ''}}" ng-repeat=" theme in playlist.themeList">
+                        <div style="height:58px;padding-top:5px;">
+                            <span class="next-concert-theme-item-no"> {{theme.id}} </span>
+                            <span class="next-concert-theme-item-title">{{ theme.title }}</span>
+                            <p class="next-concert-theme-item-content">{{ theme.artist + " : " + theme.tone + " : " + theme.speed + " bpm"}}</p>
+                            <span class="next-concert-theme-item-menu">
+                                <a on-touch="toggleThemeMenu($event, playlist.id, theme.id)" class="disable-user-behavior">
+                                    <img src="img/theme-list/theme-item-menu.png" class="next-concert-theme-item-menu-icon">
+                                </a>
+                            </span>
+                            <span class="next-concert-theme-item-play">
+                                <a ng-if="theme.letterItemList.length > 0">
+                                    <img src="img/theme-list/theme-item-play.png" class="next-concert-theme-item-play-icon">
+                                </a>
+                            </span>
+                        </div>
+                        <p class="next-concert-divider">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="isShowDetail">
+                <div style="width:100%;text-align:right;">
+                    <button class="button button-icon ion-close" style="margin-right:10px;color:white;" ng-click="showListViewFromDetailView()">
+                    </button>
+                </div>
+                <div style="width: 100%;text-align:center;margin-top:10px;">
+                    <p style="font-size: 20px;">{{ 'playlist' | translate }}{{ playlist.id }}</p>
+                    <p style="font-size: 22px;font-weight: bold;">{{ playlist.title }}</p>
+                    <p style="font-size: 20px;">{{ playlist.date }}</p>
+                </div>
+                <div style="width: 80%;height:1px;border-bottom:1px solid white;margin-left:10%;margin-right:10%;">
+                </div>
+                <div style="width: 100%;text-align:center;margin-top:10px;line-height:180px;">
+                    <p style="font-size: 160px;font-weight: bold;color:white;">{{ playlist.themeList[curThemeIndex].id }}</p>
+                </div>
+                <div style="width: 100%;text-align:center;margin-top:10px;">
+                    <p style="font-size: 25px; font-weight: bold;">{{ playlist.themeList[curThemeIndex].title }}</p>
+                    <p style="font-size: 20px;">{{ playlist.themeList[curThemeIndex].note }}</p>
+                </div>
+            </div>
+        </ion-scroll>
+        <div ng-if="isShowPlay">
+            <!-- <div style="width:100%;text-align:right;">
+                <button class="button button-icon ion-close" style="margin-right:10px;color:white;" ng-click="showListViewFromPlayView()">
+                </button>
+            </div> -->
+            <div style="height:95vh;padding-left: 5%;padding-right: 5%;padding-top: 5%;color: {{getFontColor(playlist.themeList[curThemeIndex].color)}};font-family: {{playlist.themeList[curThemeIndex].fontStyle}}; line-height:{{playlist.themeList[curThemeIndex].fontSize}}px;font-size: {{playlist.themeList[curThemeIndex].fontSize}}px; text-align: {{playlist.themeList[curThemeIndex].justification}}; font-weight: {{ playlist.themeList[curThemeIndex].bold? 'bold': 'normal'}}; background-color: {{ playlist.themeList[curThemeIndex].color }}">
+                <div class="theme-test-letter-item" ng-repeat="letterItem in playlist.themeList[curThemeIndex].letterItemList">
+                    <p ng-if="letterItem.isShow" class="theme-list-item-play-text" id="letterItem-{{letterItem.id}}">
+                        {{ letterItem.text }}&nbsp
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar class="bar theme-test-footer" align-title="center">
+        <div class="buttons buttons-left">
+            <a ng-click="setMute()">
+                <img src="img/next-concert/sound_on_img.png" style="width: 30px;height: 30px;margin-left:10px;" ng-if="!isMute"></img>
+                <img src="img/next-concert/sound_off_img.png" style="width: 30px;height: 30px;margin-left:10px;" ng-if="isMute"></img>
+            </a>
+            <a ng-click="prevTheme()">
+                <img src="img/next-concert/temper.png" style="width: 30px;height: 30px;visibility:hidden"></img>
+            </a>
+        </div>
+        <div class="buttons" style="position: absolute;width: 100%;margin-left:35%;"> 
+            <span class="icon-footer footer-back">
+                <a ng-click="prevTheme()">
+                    <img src="img/theme-test/play_back_default.png" class="footer-btn"></img>
+                </a>
+            </span>
+            <span class="icon-footer footer-play" ng-if="!isPlaying">
+                <a ng-click="playAudio()">
+                    <img src="img/theme-test/play_default.png" class="footer-center-btn"></img>
+                </a>
+            </span>
+            <span class="icon-footer footer-play" ng-if="isPlaying">
+                <a ng-click="pauseAudio()">
+                    <img src="img/theme-test/pause_default.png" class="footer-center-btn"></img>
+                </a>
+            </span>
+            <span class="icon-footer footer-next">
+                <a ng-click="nextTheme()">
+                    <img src="img/theme-test/play_next_default.png" class="footer-btn"></img>
+                </a>
+            </span>
+        </div>
+    </ion-footer-bar>
+</ion-view>

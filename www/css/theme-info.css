@@ -1,0 +1,190 @@
+.theme-info-bg {
+    position: relative;
+    height: 100%;
+    background-color: rgb(26, 26, 26);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    z-index: -3; 
+}
+
+.theme-info-view ion-scroll .scroll{
+    width: 100% !important;
+    height: 460px !important;
+}
+
+.theme-info-view .theme-info-item {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.theme-info-view .input-label {
+    color: #939393;
+}
+
+.header .theme-info-item {
+    margin-top: 5px;
+}
+
+.theme-info-item .theme-info-item-content {
+    position: absolute;
+    margin-top: 15px;
+    font-size: 3vh;
+    font-weight: bold;
+    color: rgb(37, 175, 178);
+    text-transform: uppercase;
+    margin-left: 3%;
+}
+
+.theme-info-item .theme-info-item-play {
+    position: absolute;
+    margin-left: 63%;
+    margin-top: 5px;
+}
+
+.theme-info-item .theme-info-item-play img, .theme-info-item .theme-info-item-menu img{
+    width: 35px;
+    height: 35px;
+}
+
+.theme-info-item .theme-info-item-menu {
+    position: absolute;
+    margin-left: 78%;
+    margin-top: 5px;
+}
+
+.theme-info-view .theme-info-row {
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: 10px;
+    height: 15% !important;
+    margin-top: 2%;
+}
+.theme-info-view .row-textarea {
+    height: 30% !important;
+
+}
+
+.theme-info-view .theme-info-row .input-label {
+    font-size: 2vh;
+    text-transform: uppercase;
+}
+
+.theme-info-view .theme-info-row input, .theme-info-view .theme-info-row textarea {
+    padding-left: 10px;
+    background-color: rgb(51, 51, 51);
+    font-size: 2vh;
+    color: white;
+    min-height: 5vh;
+}
+
+.theme-info-view .theme-info-row textarea {
+    padding-top: 10px;
+}
+
+.theme-info-view label {
+    width: 100%;
+}
+
+.theme-info-view .input-90 {
+    width: 90%;
+}
+
+.theme-info-view .input-100 {
+    width: 100%;
+}
+
+.theme-info-view .input-50 {
+    width: 40%;
+}
+
+.footer-row .footer-button {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #24afb2;
+    border-radius: 40px;
+    width: 100%;  
+    min-height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+}
+
+.theme-info-view .theme-info-row button.activated {
+    opacity: 0.9;
+}
+
+.theme-info-row .custom-dropbox {
+    position: relative;
+    display: inline-block;
+
+}
+
+.theme-info-row .custom-dropbox select {
+    padding-left: 10px;
+    font-size: 2vh;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    height: 5vh;
+    border: 0;
+    margin: 0;
+    border-radius: 1px;
+    text-indent: 0.01px;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-appearance: button;
+}
+
+.theme-info-row .custom-dropbox option {
+    font-size: 10px;
+}
+
+.theme-info-row .custom-dropbox::before, .theme-info-row .custom-dropbox::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+	text-indent: 10px;
+	font-weight:800;
+}
+
+.theme-info-row .custom-dropbox::after { /*  Custom dropbox arrow */
+    font-family: 'FontAwesome';
+    content: '\f078';
+    height: 1em;
+    font-size: 18px;
+    line-height: 1;
+    right: .2em;
+    top: 50%;
+    margin-top: -.5em;
+    font-weight: 300;
+    color: rgb(145, 145, 145);
+}
+
+.theme-info-row .custom-dropbox:before { /*  Custom dropbox arrow cover */
+	width: 20%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(51, 51, 51);
+    font-weight: 300;
+    border-left-style: solid;
+    border-left-color: rgb(26, 26, 26);
+}
+
+.theme-info-view .footer-button {
+    font-size: 12px;
+    width: 80px;
+    background-color: rgb(37, 175, 178);
+    border-radius: 20px;
+    text-transform: uppercase;
+    height: 5vh;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+}

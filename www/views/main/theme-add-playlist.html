@@ -1,0 +1,32 @@
+<ion-view class="theme-add-playlist-view" cache-view="false">
+    <div class="theme-add-playlist-bg"></div>
+    <ion-content scroll="false">
+        <div class="theme-add-playlist-header">
+            <p class="theme-add-playlist-header-title">{{ 'select_playlist_theme' | translate }}</p>
+        </div>
+        <div class="theme-add-playlist-row">
+            <span class="theme-add-playlist-item-no">{{ theme.id}}</span>
+            <span class="theme-add-playlist-item-title">{{ theme.title}}</span>
+            <p class="theme-add-playlist-item-content">{{ theme.note }}</p>
+            <p class="theme-add-playlist-item-date">{{ theme.artist + " : " + theme.tone + " : " + theme.speed + " bpm"}}</p>
+        </div>
+        <div class="row theme-add-playlist-theme-list-header">
+            <p class="theme-list-header">{{ 'playlist' | translate }}</p>
+        </div>
+        <ion-scroll zooming="true" direction="y" class="theme-add-playlist-list-scroll">
+            <div class="playl-theme-item-container" ng-repeat="playlist in playlList">
+                <div class="row playl-theme-item">
+                    <img class="playl-theme-item-img ng-binding" src="{{playlist.image}}" ng-if="playlist.image != '' && playlist.image != null" style="width: 40px;height:40px"></span>
+                    <img class="playl-theme-item-img ng-binding" src="img/playlist-new/playlist-default.png" ng-if="playlist.image == '' || playlist.image == null" style="width: 40px;height:40px"></span>
+                    <span class="playl-theme-item-no ng-binding">{{ 'playlist' | translate }} {{playlist.id}}</span>
+                    <span class="playl-theme-item-title ng-binding">{{playlist.title}}</span>
+                    <span class="playl-theme-item-add">
+                        <button class="button button-dark" ng-click="addThemeToPlayList(theme, playlist)">{{ 'add' | translate }}</button>
+                    </span>
+                </div>
+                <div class="playl-theme-item-divider">
+                </div>
+            </div>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

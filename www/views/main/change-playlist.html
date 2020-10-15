@@ -1,0 +1,27 @@
+<ion-view class="change-playlist-view" cache-view="false">
+    <div class="change-playlist-bg"></div>
+    <ion-content scroll="false">
+        <div class="change-playlist-header">
+            <p class="change-playlist-header-title">{{ 'select_a_playlist' | translate }}</p>
+        </div>
+        <div class="row change-playlist-theme-list-header">
+            <p class="theme-list-header">{{ 'playlist' | translate }}</p>
+        </div>
+        <ion-scroll zooming="true" direction="y" class="change-playlist-list-scroll">
+            <div class="playl-theme-item-container" ng-repeat="playlist in allPlayList">
+                <div class="row playl-theme-item">
+                    <img class="playl-theme-item-img ng-binding" src="{{playlist.image}}" ng-if="playlist.image != '' && playlist.image != null" style="width: 30px;height:30px"></span>
+                    <img class="playl-theme-item-img ng-binding" src="img/playlist-new/playlist-default.png" ng-if="playlist.image == '' || playlist.image == null" style="width: 30px;height:30px"></span>
+                    <span class="playl-theme-item-no ng-binding">{{ 'playlist' | translate }} {{playlist.id}}</span>
+                    <span class="playl-theme-item-title ng-binding">{{playlist.title}}</span>
+                    <span class="" style=" position: absolute; margin-left: 20%; margin-top: 50px; font-size: 13px; font-weight: normal;">{{ playlist.date.substring(0,10)}}</span>
+                    <span class="playl-theme-item-add" style="position: absolute;right: 5%;">
+                        <button class="button button-dark" ng-click="selectPlayList(playlist.id)">{{ 'select' | translate }}</button>
+                    </span>
+                </div>
+                <div class="playl-theme-item-divider">
+                </div>
+            </div>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

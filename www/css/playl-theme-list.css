@@ -1,0 +1,170 @@
+.playl-theme-list-bg {
+    background-color: rgb(26,26,26);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    margin-top: -1px;
+    padding-top: 1px;
+    margin-bottom: -1px;
+    width: auto;
+    height: auto;
+}
+
+.playl-theme-list-view .playl-theme-list-title {
+    margin-left: 5%;
+    color: rgb(37, 175, 178);
+    font-size: 2.5vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.playl-theme-list-view .playl-theme-list-search {
+    right: 10%;
+    margin-top: 8%;
+    color: rgb(148, 148, 148);
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+}
+
+.playl-theme-list-view .playl-theme-list-search-input {
+    right: 10%;
+    margin-top: 8%;
+    color: rgb(148, 148, 148);
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+}
+
+
+.playl-theme-list-view .playl-theme-list-search-input input {
+    background-color: transparent;
+    color: white;
+    border-bottom-color: white;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.playl-theme-list-view .playl-theme-list-search button, .playl-theme-list-view .playl-theme-list-search button:before,.playl-theme-list-view .playl-theme-list-search button:after {
+    margin: 1px;
+    padding: 0px;
+    font-size: 18px;
+    color: rgb(148, 148, 148);
+    min-height: 15px;
+    line-height: 15px;
+}
+
+.playl-theme-list-view .playl-theme-list-divider {
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(148, 148, 148);
+    height: 1px;
+}
+
+.playl-theme-list-view .playl-theme-list-item {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    height: 70px;
+}
+
+.playl-theme-list-view .playl-theme-list-header {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.playl-theme-list-item .playl-theme-list-item-title, .playl-theme-list-item .playl-theme-list-item-no{
+    position: absolute;
+}
+
+.playl-theme-list-item .playl-theme-list-item-title{
+    position: absolute;
+    margin-left: 8%;
+}
+
+.playl-theme-list-item .playl-theme-list-item-content {
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 21px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.playl-theme-list-item .playl-theme-list-item-menu {
+    position: absolute;
+    padding-top: 5px;
+    /* margin-left: 70%; */
+    font-size: 25px;
+    font-weight: normal;
+    right: 10%;
+}
+
+.playl-theme-list-item .playl-theme-list-item-menu button {
+    font-size: 12px;
+    line-height: 30px;
+    color: rgb(144, 131, 131);
+    min-width: 20px;
+    min-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.playl-theme-list-item .playl-theme-list-item-menu button:hover {
+    color: rgb(144, 131, 131);
+}
+
+.playl-theme-list-item .playl-theme-list-item-plus {
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: rgb(148, 148, 148);
+    margin: 0px;
+    height: 40px;
+}
+.playl-theme-list-item .playl-theme-list-item-plus .button-icon:before {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.playl-theme-list-item .playl-theme-list-item-plus-title {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: rgb(148, 148, 148);
+    text-transform: uppercase;
+}
+
+.playl-theme-list-footer {
+    height: 10%;
+    text-align: center;
+}
+
+.playl-theme-list-footer label button {
+    margin-top: 3%;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgb(37, 175, 178);
+    border-radius: 30px;
+    width: 100px;
+    text-transform: uppercase;
+    min-height: 30px;
+}

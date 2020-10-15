@@ -1,0 +1,42 @@
+<ion-view class="playl-add-theme-view" cache-view="false">
+    <div class="playl-add-theme-bg"></div>
+    <ion-content scroll="false">
+        <div class="playl-add-theme-header">
+            <p class="playl-add-theme-header-title">{{ 'add_theme_to_playlist' | translate }}</p>
+        </div>
+        <div class="playl-add-theme-row">
+            <span class="playl-add-theme-item-no">{{ playlist.id}}</span>
+            <span class="playl-add-theme-item-title">{{ playlist.title}}</span>
+            <p class="playl-add-theme-item-content">{{ playlist.note }}</p>
+            <p class="playl-add-theme-item-date">{{ playlist.date }}</p>
+        </div>
+        <div class="row playl-add-theme-theme-list-header">
+            <p class="theme-list-header">{{ 'theme_list' | translate }}</p>
+        </div>
+        <ion-scroll zooming="true" direction="y" class="playl-add-theme-list-scroll">
+            <div class="playl-theme-item-container" ng-repeat="theme in themeList">
+                <div class="row playl-theme-item">
+                    <span class="playl-theme-item-menu">
+                        <button class="button button-icon icon ion-trash-a" ng-click="deleteTheme(theme)"></button>
+                    </span>
+                    <span class="playl-theme-item-no ng-binding">{{theme.id}}</span>
+                    <span class="playl-theme-item-title ng-binding">{{theme.title}}</span>
+                    <p class="playl-theme-item-content ng-binding">{{ theme.artist + " : " + theme.tone + " : " + theme.speed + " bpm"}}</p>
+                </div>
+                <div class="playl-theme-item-divider">
+                </div>
+            </div>
+        </ion-scroll>
+        <div class="row playl-add-theme-row footer-button">
+            <label>
+                <button class="button add-theme" on-touch="toggleAddTheme()">&nbsp;{{ 'add_theme' | translate }}&nbsp;</button>
+            </label>
+            <label>
+                <button class="button" on-touch="doPlayListSave()">&nbsp;{{ 'save' | translate }}&nbsp;</button>
+            </label>
+            <label>
+                <button class="button" on-touch="doCancel()">{{ 'cancel' | translate }}</button>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>
